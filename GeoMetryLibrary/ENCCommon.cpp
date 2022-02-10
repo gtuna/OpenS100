@@ -7,9 +7,9 @@
 
 #include <fstream>
 
-unsigned ENCCommon::DrawingType = 0;		    // 1 :°Æmain_PaperChart.xsl°Ø- includes all the COMMON entries plus PAPER_CHART symbols and SYMBOLIZED_BOUNDARIES.
-									// 2 :°Æmain_SimpleSymbols°Ø - includes all the COMMON entries plus SIMPLIFIED symbols and SYMBOLIZED _BOUNDARIES.	
-									// 3 :°Æmain_Simplified.xsl°Ø- includes all the COMMON entries plus SIMPLIFIED symbols and PLAIN_BOUNDARIES.
+unsigned ENCCommon::DrawingType = 0;		    // 1 :'main_PaperChart.xsl'- includes all the COMMON entries plus PAPER_CHART symbols and SYMBOLIZED_BOUNDARIES.
+									// 2 :'main_SimpleSymbols' - includes all the COMMON entries plus SIMPLIFIED symbols and SYMBOLIZED _BOUNDARIES.	
+									// 3 :'main_Simplified.xsl'- includes all the COMMON entries plus SIMPLIFIED symbols and PLAIN_BOUNDARIES.
 bool ENCCommon::SymbolizedAreaBoundary = true;
 bool ENCCommon::SeabedAreaType = false;
 
@@ -59,7 +59,9 @@ __int64 ENCCommon::OVER_GROUP = 0x7FFFFFFF;
 
 BOOL ENCCommon::SHOW_TEXT_PLACEMENT = FALSE;
 
-std::wstring ENCCommon::DISPLAY_FONT_NAME = L"∏º¿∫ ∞ÌµÒ";
+std::wstring ENCCommon::DISPLAY_FONT_NAME = L"Arial";
+//this was a korean font. I changed it to Arial
+//std::wstring ENCCommon::DISPLAY_FONT_NAME = L"ÎßëÏùÄ Í≥†Îîï";
 int ENCCommon::DISPLAY_FONT_SIZE = 15;
 
 float ENCCommon::DISPLAY_SYMBOL_SCALE = 5;
@@ -301,7 +303,7 @@ bool ENCCommon::Open(std::wstring filePath)
 
 	if (!ifs.is_open())
 	{
-		OutputDebugString(_T("º≥¡§∆ƒ¿œ(settings.txt)¿ª ∑ŒµÂ«œ¡ˆ ∏¯«ﬂΩ¿¥œ¥Ÿ!"));
+		OutputDebugString(_T("Failed to load settings file (settings.txt)!"));
 		return false;
 	}
 
