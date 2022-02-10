@@ -1,15 +1,15 @@
-// stdafx.h : 자주 사용하지만 자주 변경되지는 않는
-// 표준 시스템 포함 파일 및 프로젝트 관련 포함 파일이
-// 들어 있는 포함 파일입니다.
+// stdafx.h : An include file that contains standard system
+// include files and project-specific include files 
+// that are used frequently but not frequently changed.
 
 #pragma once
 
 #ifndef VC_EXTRALEAN
-#define VC_EXTRALEAN            // 거의 사용되지 않는 내용은 Windows 헤더에서 제외합니다.
+#define VC_EXTRALEAN            // Exclude rarely used content from Windows headers.
 #endif
 
 #ifndef _AFX_NO_OLE_SUPPORT
-#include <afxdtctl.h>           // Internet Explorer 4 공용 컨트롤에 대한 MFC 지원입니다.
+#include <afxdtctl.h>           // MFC support for Internet Explorer 4 common controls.
 #endif
 
 #include <map>

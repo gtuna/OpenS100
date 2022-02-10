@@ -99,7 +99,7 @@ public:
 	** factor   :
 				POINT _p1 - The starting point of the vector.
 				POINT _p2 - The end point of the vector.
-	** Return value : °á°ú°ª(´ÜÀ§ : radian, ¹üÀ§ : 0 ~ 2 * pi)
+	** Return value : arc cosine of radian (arccos(radian)) in the range [0 , Ï€]
 	*/
 	double GetAngle(POINT _p1, POINT _p2);
 
