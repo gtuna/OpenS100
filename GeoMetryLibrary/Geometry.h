@@ -18,10 +18,7 @@ public:
 public:
 	virtual void DrawGeometry(HDC &hDC, Scaler *scaler, double offset = 0) {};
 	virtual void DrawTextInfo(HDC &hDC, Scaler *scaler, double offset = 0) {};
-	virtual void DrawGeometry(CDCRenderTarget* pRenderTarget, Scaler *scaler, double offsetX = 0, double offsetY = 0) {};
-	virtual void DrawTextInfo(CDCRenderTarget* pRenderTarget, Scaler *scaler, double offsetX = 0, double offsetY = 0) {};
-	virtual void DrawGeometry(ID2D1GeometrySink* pSink, Scaler *scaler, double offsetX = 0, double offsetY = 0) {};
-
+	
 public:
 	/*
 ** Function  : Find the center of gravity of a given polygon.
@@ -99,7 +96,7 @@ public:
 	** factor   :
 				POINT _p1 - The starting point of the vector.
 				POINT _p2 - The end point of the vector.
-	** Return value : arc cosine of radian (arccos(radian)) in the range [0 , π]
+	** Return value :  radian, range : 0 ~ 2 * pi
 	*/
 	double GetAngle(POINT _p1, POINT _p2);
 

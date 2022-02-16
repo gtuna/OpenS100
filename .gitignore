@@ -272,3 +272,5 @@ Redist/**
 
 GeoMetryLibrary/doxygen/
 LatLonUtility/doxygen/
+# Backup file of WinMerge
+*.bak
