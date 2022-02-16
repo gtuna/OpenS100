@@ -1,15 +1,11 @@
-// stdafx.h : An include file that contains standard system
-// include files and project-specific include files 
-// that are used frequently but not frequently changed.
-
 #pragma once
 
 #ifndef VC_EXTRALEAN
-#define VC_EXTRALEAN            // Exclude rarely used content from Windows headers.
+#define VC_EXTRALEAN            
 #endif
 
 #ifndef _AFX_NO_OLE_SUPPORT
-#include <afxdtctl.h>           // MFC support for Internet Explorer 4 common controls.
+#include <afxdtctl.h>           
 #endif
 
 #include <map>

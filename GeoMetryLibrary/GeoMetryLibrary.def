@@ -1,6 +1,6 @@
-; GeoMetryLibrary.def : Defines module parameters for the DLL.
+; 
 
 LIBRARY
 
 EXPORTS
-    ; Explicit export can be used here.
+    ; 
