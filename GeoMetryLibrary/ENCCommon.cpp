@@ -7,9 +7,9 @@
 
 #include <fstream>
 
-unsigned ENCCommon::DrawingType = 0;		    // 1 :¡®main_PaperChart.xsl¡¯- includes all the COMMON entries plus PAPER_CHART symbols and SYMBOLIZED_BOUNDARIES.
-									// 2 :¡®main_SimpleSymbols¡¯ - includes all the COMMON entries plus SIMPLIFIED symbols and SYMBOLIZED _BOUNDARIES.	
-									// 3 :¡®main_Simplified.xsl¡¯- includes all the COMMON entries plus SIMPLIFIED symbols and PLAIN_BOUNDARIES.
+unsigned ENCCommon::DrawingType = 0;		    // 1 :'main_PaperChart.xsl'- includes all the COMMON entries plus PAPER_CHART symbols and SYMBOLIZED_BOUNDARIES.
+									// 2 :'main_SimpleSymbols' - includes all the COMMON entries plus SIMPLIFIED symbols and SYMBOLIZED _BOUNDARIES.	
+									// 3 :'main_Simplified.xsl'- includes all the COMMON entries plus SIMPLIFIED symbols and PLAIN_BOUNDARIES.
 bool ENCCommon::SymbolizedAreaBoundary = true;
 bool ENCCommon::SeabedAreaType = false;
 
