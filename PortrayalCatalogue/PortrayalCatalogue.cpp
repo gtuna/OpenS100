@@ -132,16 +132,20 @@ void PortrayalCatalogue::GetContents(pugi::xml_node& node)
 	for (pugi::xml_node instruction = node.first_child(); instruction; instruction = instruction.next_sibling())
 	{
 		const pugi::char_t* instructionName = instruction.name();
-		if (!strcmp(instructionName, "pixmaps"))
+
+		if (!strcmp(instructionName, "pixmaps")) 
 		{
+			//구조없음
 		}
+
 		else if (!strcmp(instructionName, "colorProfiles")) // read color
 		{
 			colorProfiles.GetContents(instruction);
 		}
+
 		else if (!strcmp(instructionName, "symbols"))
 		{
-			// not read a symbol
+			symbols.GetContents(instruction);
 		}
 
 		else if (!strcmp(instructionName, "lineStyles"))
@@ -156,34 +160,37 @@ void PortrayalCatalogue::GetContents(pugi::xml_node& node)
 
 		else if (!strcmp(instructionName, "fonts"))
 		{
+			//구조없음
 		}
 
 		else if (!strcmp(instructionName, "viewingGroups"))
 		{
-			// not read a contents
 			viewingGroups.GetContents(instruction);
 		}
 
-		else if (!strcmp(instructionName, "foundationMode"))
+		else if (!strcmp(instructionName, "foundationMode")) //끝
 		{
 			foundationMode.GetContents(instruction);
 		}
 
-		else if (!strcmp(instructionName, "viewingGroupLayers"))
+		else if (!strcmp(instructionName, "viewingGroupLayers")) //회의필요 : viewingGroup의 id 값때문에
 		{
 			viewingGroupLayers.GetContents(instruction);
 		}
 
-		else if (!strcmp(instructionName, "displayModes"))
+		else if (!strcmp(instructionName, "displayModes")) //진행중
 		{
+			displayModes.GetContents(instruction);
 		}
 
-		else if (!strcmp(instructionName, "displayPlane"))
+		else if (!strcmp(instructionName, "displayPlanes"))
 		{
+			displayPlanes.GetContents(instruction);
 		}
 
 		else if (!strcmp(instructionName, "context"))
 		{
+			context.GetContents(instruction);
 		}
 
 		else if (!strcmp(instructionName, "rules"))
@@ -194,7 +201,6 @@ void PortrayalCatalogue::GetContents(pugi::xml_node& node)
 		{
 			std::string value(instructionName);
 			value + ": not Context\n";
-
 		}
 	}
 }
@@ -203,7 +209,7 @@ void PortrayalCatalogue::CreateSVGD2Geometry(ID2D1Factory1* factory)
 {
 	s100PCManager->CreateSVGGeometry(factory);
 }
-
+ 
 void PortrayalCatalogue::SetRootPath(std::wstring& value)
 {
 	rootPath = value;
