@@ -15,6 +15,8 @@ public:
 private:
 	// key : id
 	std::unordered_map<std::wstring, S100_ColorProfile*> colorProfileFiles;
+	std::vector< S100_ColorProfile*> colorProfileFiles_v;
+
 
 public:
 	//Read ColorProfile
@@ -26,4 +28,5 @@ public:
 	std::unordered_map<std::wstring, S100_ColorProfile*> GetColorProfiles();
 
 	void SetColorProfile(std::wstring key, S100_ColorProfile* value);
+	std::vector< S100_ColorProfile*>* S100_ColorProfiles::GetColorProfilesVector();
 }; 

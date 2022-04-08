@@ -25,6 +25,7 @@ void S100_ColorProfiles::GetContents(pugi::xml_node& node)
 		S100_ColorProfile* colorPath = new S100_ColorProfile();
 		colorPath->GetContentsInfo(colorProfile);
 		colorProfileFiles[colorPath->Getid()] = colorPath;
+		colorProfileFiles_v.push_back(colorPath);
 	}
 }
 
@@ -59,3 +60,9 @@ void S100_ColorProfiles::SetColorProfile(std::wstring key, S100_ColorProfile* va
 {
 	colorProfileFiles[key] = value;
 }
+
+std::vector< S100_ColorProfile*>* S100_ColorProfiles::GetColorProfilesVector()
+{
+	return &colorProfileFiles_v;
+}
+

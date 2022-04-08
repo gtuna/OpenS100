@@ -11,7 +11,10 @@ namespace Portrayal
 
 	Context::~Context()
 	{
-
+		for (auto i = parameter.begin(); i != parameter.end(); i++)
+		{
+			delete *i;
+		}
 	}
 
 	int Context::GetCountOfParameter()
@@ -24,9 +27,9 @@ namespace Portrayal
 		return parameter.at(index);
 	}
 
-	std::vector<ContextParameter*> Context::GetContextParameter()
+	std::vector<ContextParameter*>* Context::GetContextParameter()
 	{
-		return parameter;
+		return &parameter;
 	}
 
 	void Context::SetContextParameter(ContextParameter* value)
@@ -36,7 +39,7 @@ namespace Portrayal
 
 	void Context::SetContextParameter(std::vector<ContextParameter*> value)
 	{
-		parameter=value;
+		parameter = value;
 	}
 
 	void Context::GetContents(pugi::xml_node& node)
@@ -50,7 +53,6 @@ namespace Portrayal
 				ContextParameter* context = new ContextParameter();
 				context->GetContents(instruction);
 				parameter.push_back(context);
-
 			}
 		}
 	}

@@ -11,7 +11,10 @@ namespace Portrayal
 
 	DisplayModes::~DisplayModes()
 	{
-
+		for (auto i = displayMode.begin(); i != displayMode.end(); i++)
+		{
+			delete *i;
+		}
 	}
 
 	void DisplayModes::SetDisplayMode(DisplayMode* value)
@@ -29,9 +32,9 @@ namespace Portrayal
 		return displayMode[index];
 	}
 
-	std::vector<DisplayMode*> DisplayModes::GetDisplayMode()
+	std::vector<DisplayMode*>* DisplayModes::GetDisplayModeVector()
 	{
-		return displayMode;
+		return &displayMode;
 	}
 
 	int DisplayModes::GetCountOfDisplayMode() 
